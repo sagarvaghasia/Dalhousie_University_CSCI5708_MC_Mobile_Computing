@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ChatBubble">
+        <item name="android:textSize">@dimen/chat_text_size</item>
+        <item name="android:minHeight">@dimen/chat_standard_size</item>
+        <item name="android:maxWidth">@dimen/chat_max_size</item>
+    </style>
+
+    <style name="SystemMessageBubble">
+        <item name="android:textSize">@dimen/system_text_size</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxWidth">@dimen/chat_max_size</item>
+    </style>
+
+    <style name="Theme.Group7Project.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatActivityLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity">
+
+    <RelativeLayout
+        android:id="@+id/chatHeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_header_height"
+        android:background="@color/shadow_color"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chatUserDisplayImage"
+            android:layout_width="@dimen/chat_header_height"
+            android:layout_height="@dimen/chat_header_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/chatUserNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chat_header_height"
+            android:layout_alignParentLeft="@+id/chatUserDisplayImage"
+            android:layout_marginLeft="65dp"
+            android:gravity="center_vertical"
+            android:text="Stephen Flemming"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/chatMenuActionButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="4dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_more_vert_50" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/sendMessageLayout"
+        app:layout_constraintTop_toBottomOf="@+id/chatHeaderLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/chatLoadProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/matchesRecyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_match" />
+
+    </RelativeLayout>
+
+    <!--     Referred to the below URL for the idea of using relative layout to design type message and send section-->
+    <!--     https://medium.com/codex/how-to-build-a-messaging-ui-for-your-android-chat-app-883fad05f43a-->
+    <RelativeLayout
+        android:id="@+id/sendMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/messageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sendmessage_left_margin"
+            android:layout_toStartOf="@+id/sendMessageButton"
+            android:layout_weight="1"
+            android:hint="Type a message"
+            android:textColor="@color/black"
+            android:textColorHint="@color/send_message_text_hint" />
+
+        <Button
+            android:id="@+id/sendMessageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:maxHeight="150dp"
+            android:onClick="onMessageSend"
+            android:text="Send" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

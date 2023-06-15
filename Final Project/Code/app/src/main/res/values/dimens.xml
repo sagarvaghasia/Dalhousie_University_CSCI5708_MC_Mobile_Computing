@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navigation_bar_height">50dp</dimen>
+    <dimen name="tab_min_width">60dp</dimen>
+    <dimen name="like_dislike_buttons_container_height">100dp</dimen>
+    <dimen name="like_dislike_button_height">80dp</dimen>
+    <dimen name="chat_margin">4dp</dimen>
+    <dimen name="send_button_radius">5dp</dimen>
+    <dimen name="chat_text_size">18sp</dimen>
+    <dimen name="chat_standard_size">50dp</dimen>
+    <dimen name="chat_max_size">300dp</dimen>
+    <dimen name="chat_header_height">50dp</dimen>
+    <dimen name="sendmessage_left_margin">4dp</dimen>
+    <dimen name="system_text_size">12sp</dimen>
+    <dimen name="card_dimension">350dp</dimen>
+    <dimen name="card_name_height">100dp</dimen>
+</resources>

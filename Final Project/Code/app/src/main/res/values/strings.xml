@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Business Boosters</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_available_user">No one found. Try adjusting your preferences.</string>
+    <string name="e_mail">E-mail</string>
+    <string name="logout">Logout</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="like_button_conten_description">Like Button</string>
+    <string name="dislike_button_content_description">Dislike</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_description">description</string>
+    <string name="is_hunt_on">Is hunt on?</string>
+    <string name="save_details">Save Details</string>
+    <string name="preferences">Preferences</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="are_you">Are You ??</string>
+</resources>

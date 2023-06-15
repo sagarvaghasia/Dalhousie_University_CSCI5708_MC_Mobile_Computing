@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.InvestorProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <!--Referred default pic https://creativecommons.org/-->
+            <ImageView
+                android:id="@+id/photoIV"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:paddingBottom="8dp"
+                android:src="@drawable/default_pic" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTIL"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photoIV"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTIL"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/nameTIL"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_description" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_hunt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionTIL"
+                android:paddingBottom="8dp"
+                android:text="@string/is_hunt_on" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_leftSwipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/switch_hunt"
+                android:paddingBottom="8dp"
+                android:text="Show Left Swipe in Matches" />
+
+            <TextView
+                android:id="@+id/preferences_heading"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/switch_leftSwipe"
+                android:paddingBottom="8dp"
+                android:text="@string/preferences"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/location_label"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/preferences_heading"
+                android:text="Preferred Location" />
+
+            <Spinner
+                android:id="@+id/spinner_location"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/location_label"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/category_label"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/spinner_location"
+                android:text="Preferred Category" />
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/category_label"
+                android:paddingBottom="8dp" />
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/space_between_spinner_button"
+                android:layout_width="300dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/spinner_category" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_investor"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/space_between_spinner_button"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:text="@string/save_details" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout_investor"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_save_investor"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:text="@string/logout" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaaaaaaa"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progress_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
